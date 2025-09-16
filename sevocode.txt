@@ -1,0 +1,55 @@
+#include <ESP32Servo.h>  
+
+Servo servo;  // Create servo object  
+
+void setup() {  
+  Serial.begin(115200);    
+
+  // Attach servo to GPIO 15 (you can change pin)  
+  servo.attach(15);      
+
+  // Start at neutral (90 degrees = middle)  
+  servo.write(90);  
+  delay(1000);  
+}  
+
+void loop() {  
+  if (Serial.available()) {  
+    String color = Serial.readStringUntil('\n');  
+    color.trim();  
+
+    if (color == "RED") {  
+      servo.write(60);   // Bin A  
+      Serial.println("Moved to RED position (60°)");  
+      delay(1000);  
+      servo.write(90);   // Return to neutral  
+      Serial.println("Returned to Neutral (90°)");  
+    }  
+
+    else if (color == "GREEN") {  
+      servo.write(120);  // Bin B  
+      Serial.println("Moved to GREEN position (120°)");  
+      delay(1000);  
+      servo.write(90);   // Return to neutral  
+      Serial.println("Returned to Neutral (90°)");  
+    }  
+
+    else if (color == "BLUE") {  
+      servo.write(180);  // Bin C  
+      Serial.println("Moved to BLUE position (180°)");  
+      delay(1000);  
+      servo.write(90);   // Return to neutral  
+      Serial.println("Returned to Neutral (90°)");  
+    }  
+
+    else if (color == "UNKNOWN") {  
+      servo.write(0);    // Bin D (Unknown objects go left)  
+      Serial.println("Moved to UNKNOWN position (0°)");  
+      delay(1000);  
+      servo.write(90);   // Return to neutral  
+      Serial.println("Returned to Neutral (90°)");  
+    }  
+
+    delay(500); // Small pause before next detection  
+  }  
+}  
