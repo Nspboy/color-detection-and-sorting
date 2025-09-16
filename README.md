@@ -44,7 +44,7 @@ This project detects red, green, and blue objects in real-time using your webcam
 
 ### 3. Hardware Setup
 
-![Hardware Photo](images/hardware_photo.jpg)
+![Hardware Photo](D:\project\images\esp32.jpg)
 
 ---
 
@@ -54,15 +54,6 @@ A high-level overview of system components:
 
 ![Architecture Diagram](images/architecture.png)
 
----
-
-## Hardware Setup
-
-If you use custom wiring (ESP32, LEDs, camera, etc.), include a simple wiring diagram:
-
-![Wiring Schematic](images/wiring.png)
-
----
 
 ## Installation
 
@@ -112,16 +103,6 @@ If you use custom wiring (ESP32, LEDs, camera, etc.), include a simple wiring di
 - **NumPy** for efficient array handling
 - **playsound** for audio feedback
 
----
 
-## License
 
-[MIT License](LICENSE)
 
----
-
-## Credits
-
-Made by [Your Name].<br>
-Diagram created with [draw.io/Mermaid].<br>
-See [Contributors](#) for those who helped with this project.
