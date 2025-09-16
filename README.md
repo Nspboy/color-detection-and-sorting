@@ -18,8 +18,7 @@ A real-time color detection system that uses OpenCV for computer vision, communi
 - [Usage](#usage)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [License](#license)
-- [Credits](#credits)
+
 
 ---
 
@@ -44,7 +43,7 @@ This project detects red, green, and blue objects in real-time using your webcam
 
 ### 3. Hardware Setup
 
-![Hardware Photo](D:\project\images\esp32.jpg)
+![Hardware Photo]()
 
 ---
 
